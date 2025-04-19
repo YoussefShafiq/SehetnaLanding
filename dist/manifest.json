@@ -1,0 +1,21 @@
+{
+    "name": "Sehtnaa",
+    "short_name": "Sehtnaa",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#1e90ff",
+    "description": "Sehtnaa connects you with certified nurses for home medical services. Fast, reliable, and secure.",
+    "icons": [
+        {
+            "src": "/favicon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/favicon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
