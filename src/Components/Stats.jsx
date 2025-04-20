@@ -1,27 +1,32 @@
+import { HandHeart, User2, Users2, UsersRound } from 'lucide-react';
 import React, { useState, useEffect, useRef } from 'react';
 
 export default function Stats() {
     const stats = [
-        { title: "Users", value: 1000 },
-        { title: "Providers", value: 500 },
-        { title: "Services", value: 750 },
-        { title: "Total Users", value: 2000 }
+        { title: "Users", value: 1000, icon: <User2 size={40} color='#3499c5' strokeWidth={2} /> },
+        { title: "Providers", value: 500, icon: <UsersRound size={40} color='#3499c5' strokeWidth={2} /> },
+        { title: "Services", value: 750, icon: <HandHeart size={40} color='#3499c5' strokeWidth={2} /> },
+        { title: "Total Users", value: 2000, icon: <UsersRound size={40} color='#3499c5' strokeWidth={2} /> }
     ];
 
     return (
-        <div className="flex justify-center gap-8 py-10 flex-wrap px-4">
-            {stats.map((stat, index) => (
-                <StatItem
-                    key={index}
-                    title={stat.title}
-                    value={stat.value}
-                />
-            ))}
+        <div className="flex flex-col gap-8 py-20  px-4 bg-primary bg-opacity-15 text-center">
+            <h1 className='text-4xl font-bold text-black'>Our <span className='text-primary'>Metrics</span> Tell the Story</h1>
+            <div className="flex justify-center gap-8 flex-wrap">
+                {stats.map((stat, index) => (
+                    <StatItem
+                        key={index}
+                        title={stat.title}
+                        value={stat.value}
+                        icon={stat.icon}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
 
-function StatItem({ title, value }) {
+function StatItem({ title, value, icon }) {
     const [count, setCount] = useState(0);
     const [hasAnimated, setHasAnimated] = useState(false);
     const statRef = useRef(null);
@@ -74,9 +79,10 @@ function StatItem({ title, value }) {
     return (
         <div
             ref={statRef}
-            className="flex flex-col items-center justify-center w-40 h-40 sm:w-48 sm:h-48 bg-primary bg-opacity-20 shadow-xl shadow-[#569bb99e] rounded-xl p-5 transition-all hover:scale-105"
+            className="flex flex-col items-center justify-center w-40 h-40 sm:w-48 sm:h-48 bg-white shadow-xl shadow-[#569bb94d] rounded-xl p-5 transition-all hover:scale-105"
         >
-            <h2 className="text-lg sm:text-xl font-medium text-gray-700">{title}</h2>
+            {icon}
+            <h2 className="text-lg sm:text-xl font-medium text-[#2a7b9e]">{title}</h2>
             <p className="text-3xl sm:text-4xl font-bold text-primary mt-2">
                 {count.toLocaleString()}
             </p>

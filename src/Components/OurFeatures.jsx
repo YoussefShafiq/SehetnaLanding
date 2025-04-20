@@ -5,30 +5,35 @@ import { Heart, Zap, Shield, Globe, Clock } from 'lucide-react';
 export default function OurFeatures() {
     const features = [
         {
-            title: "Fast Service",
+            title: "Quick Medical Assistance",
             icon: <Zap color='#3499c5' />,
-            animation: "animate__fadeInTopLeft"
+            animation: "animate__fadeInTopLeft",
+            description: "Request immediate or scheduled medical help right from your phone.",
         },
         {
-            title: "Reliable",
+            title: "Verified Nurses",
             icon: <Shield color='#3499c5' />,
-            animation: "animate__fadeInTopRight"
+            animation: "animate__fadeInTopRight",
+            description: "Only licensed and approved nurses are allowed to accept requests.",
         },
         {
-            title: "Global Reach",
+            title: "Easy Access Anywhere",
             icon: <Globe color='#3499c5' />,
-            animation: "animate__fadeInBottomLeft"
+            animation: "animate__fadeInBottomLeft",
+            description: "Get medical service at home, wherever you are in the city.",
         },
         {
-            title: "24/7 Support",
+            title: "24/7 Availability",
             icon: <Clock color='#3499c5' />,
-            animation: "animate__fadeInBottomRight"
+            animation: "animate__fadeInBottomRight",
+            description: "Request help anytime – we're always here for you, day or night.",
         }
     ];
 
+
     return (
-        <div className="flex flex-col lg:flex-row items-center py-20 px-4 sm:px-6 lg:px-8">
-            <div className="w-full lg:w-2/5 flex justify-center items-center mb-10 lg:mb-0">
+        <div className="flex flex-col lg:flex-row items-center py-10 lg:py-20 px-4 sm:px-6 lg:px-8">
+            <div className="w-full lg:w-2/5 lg:flex justify-center items-center mb-10 lg:mb-0 hidden">
                 <img
                     src={img}
                     className='w-11/12 max-w-lg'
@@ -52,6 +57,7 @@ export default function OurFeatures() {
                             title={feature.title}
                             icon={feature.icon}
                             animation={feature.animation}
+                            description={feature.description}
                         />
                     ))}
                 </div>
@@ -60,7 +66,7 @@ export default function OurFeatures() {
     );
 }
 
-function FeatureCard({ title, icon, animation }) {
+function FeatureCard({ title, icon, animation, description }) {
     const [isVisible, setIsVisible] = useState(false);
     const cardRef = useRef(null);
 
@@ -102,7 +108,7 @@ function FeatureCard({ title, icon, animation }) {
                 {title}
             </h2>
             <p className="mt-2 text-gray-600">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                {description}
             </p>
         </div>
     );

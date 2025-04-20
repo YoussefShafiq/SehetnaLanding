@@ -3,6 +3,8 @@ import Hero from './Hero'
 import OurFeatures from './OurFeatures'
 import Stats from './Stats'
 import FeedbacksSlider from './FeedbacksSlider'
+import AppLinks from './AppLinks'
+import Footer from './Footer'
 
 export default function Home() {
     return <>
@@ -11,6 +13,8 @@ export default function Home() {
             <OurFeatures />
             <Stats />
             <FeedbacksSlider />
+            <AppLinks />
+            <Footer />
         </div>
     </>
 }

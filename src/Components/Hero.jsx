@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Rocket } from 'lucide-react';
 import Mockup from '../assets/images/Mockup.png';
+import logo from '../assets/images/logo.svg';
 
 export default function Hero() {
     const sectionRef = useRef(null);
@@ -38,25 +39,17 @@ export default function Hero() {
             <div className={`flex flex-col lg:flex-row justify-between items-center px-4 sm:px-8 transition-all duration-1000 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-10'
                 }`}>
                 <div className="flex items-center text-lg font-bold uppercase">
-                    Sehetna App
+                    <img src={logo} alt="sehtnaa logo" className="w-28 mr-2" />
                 </div>
-                <div className="hidden lg:flex items-center gap-3 sm:gap-5 font-semibold">
-                    <button className="hover:underline">Contact</button>
-                    <button className="flex items-center gap-2 bg-white bg-opacity-90 text-primary px-3 sm:px-4 py-1 sm:py-2 rounded-xl hover:bg-opacity-100 transition-all">
-                        How it works
-                    </button>
-                    <button className="flex items-center gap-2 bg-secondary text-white px-3 sm:px-4 py-1 sm:py-2 rounded-xl hover:bg-secondary/90 transition-all">
-                        <Rocket size={18} /> Get Started
-                    </button>
-                </div>
+
             </div>
 
             {/* Hero Content */}
-            <div className="flex flex-col lg:flex-row justify-between items-center px-4 sm:px-8 mt-10 sm:mt-20 flex-grow">
+            <div className="flex flex-col lg:flex-row justify-between items-center px-4 sm:px-8 mt-10 sm:mt-5 lg:mt-0 flex-grow">
                 <div className={`flex flex-col gap-3 sm:gap-5 w-full lg:w-1/2 transition-all duration-1000 delay-100 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
-                        Welcome to Sehetna
+                        Welcome to Sehtnaa
                     </h1>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
                         The best app for your Health management
@@ -66,14 +59,11 @@ export default function Hero() {
                         tracks your wellness, and simplifies medical management.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 font-semibold mt-3">
-                        <button className={`flex items-center gap-2 bg-secondary text-white px-4 sm:px-5 py-2 sm:py-3 rounded-xl hover:bg-secondary/90 transition-all ${animated ? 'animate__animated animate__bounceIn' : 'opacity-0'
+                        <a href="#download" className={`flex items-center gap-2 bg-secondary text-white px-4 sm:px-5 py-2 sm:py-3 rounded-xl hover:bg-secondary/90 transition-all ${animated ? 'animate__animated animate__bounceIn' : 'opacity-0'
                             }`}>
                             <Rocket size={18} /> Get Started
-                        </button>
-                        <button className={`flex items-center gap-2 bg-white bg-opacity-90 text-primary px-4 sm:px-5 py-2 sm:py-3 rounded-xl hover:bg-opacity-100 transition-all ${animated ? 'animate__animated animate__bounceIn delay-200' : 'opacity-0'
-                            }`}>
-                            How it works
-                        </button>
+                        </a>
+
                     </div>
                 </div>
 
