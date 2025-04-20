@@ -25,20 +25,20 @@ import { Helmet } from 'react-helmet';
 </Helmet>
 
 function App() {
-  useEffect(() => {
-    // Dynamic import to handle SSR and module compatibility
-    const initializeWOW = async () => {
-      if (typeof window !== 'undefined') { // Ensure we're on client-side
-        const { WOW } = await import('wowjs');
-        new WOW({
-          offset: 100,
-          mobile: true,
-          live: true
-        }).init();
-      }
-    };
-    initializeWOW();
-  }, []);
+  // useEffect(() => {
+  //   // Dynamic import to handle SSR and module compatibility
+  //   const initializeWOW = async () => {
+  //     if (typeof window !== 'undefined') { // Ensure we're on client-side
+  //       const { WOW } = await import('wowjs');
+  //       new WOW({
+  //         offset: 100,
+  //         mobile: true,
+  //         live: true
+  //       }).init();
+  //     }
+  //   };
+  //   initializeWOW();
+  // }, []);
 
   const routers = createBrowserRouter([
     { path: "/", element: <Home /> },
