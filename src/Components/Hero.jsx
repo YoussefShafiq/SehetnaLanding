@@ -1,7 +1,7 @@
 import React, { useRef, useEffect, useState } from 'react';
 import { Rocket } from 'lucide-react';
 import Mockup from '../assets/images/Mockup.png';
-import logo from '../assets/images/logo.svg';
+import logo from '../assets/images/logo.png';
 
 export default function Hero() {
     const sectionRef = useRef(null);
