@@ -5,3 +5,20 @@
 * {
     scroll-behavior: smooth;
 }
+
+
+::-webkit-scrollbar {
+    @apply w-[0px]
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-transparent
+}
+
+::-webkit-scrollbar-thumb {
+    @apply opacity-20 bg-primary
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-primary
+}
