@@ -1,26 +1,55 @@
 import { HandHeart, User2, Users2, UsersRound } from 'lucide-react';
 import React, { useState, useEffect, useRef } from 'react';
+import axios from 'axios';
+import { useQuery } from '@tanstack/react-query';
 
 export default function Stats() {
+    function getData() {
+        return axios.get('https://api.sehtnaa.com/api/landing');
+    }
+
+    const { data: landingData } = useQuery({
+        queryKey: ['landing'],
+        queryFn: getData,
+    })
+
     const stats = [
-        { title: "Users", value: 1000, icon: <User2 size={40} color='#3499c5' strokeWidth={2} /> },
-        { title: "Providers", value: 500, icon: <UsersRound size={40} color='#3499c5' strokeWidth={2} /> },
-        { title: "Services", value: 750, icon: <HandHeart size={40} color='#3499c5' strokeWidth={2} /> },
-        { title: "Total Users", value: 2000, icon: <UsersRound size={40} color='#3499c5' strokeWidth={2} /> }
+        {
+            title: "Users",
+            value: landingData?.data?.data?.customers?.count || 0,
+            icon: <User2 size={40} color='#3499c5' strokeWidth={2} />
+        },
+        {
+            title: "Providers",
+            value: landingData?.data?.data?.providers?.count || 0,
+            icon: <UsersRound size={40} color='#3499c5' strokeWidth={2} />
+        },
+        {
+            title: "Services",
+            value: landingData?.data?.data?.services?.count || 0,
+            icon: <HandHeart size={40} color='#3499c5' strokeWidth={2} />
+        },
+        {
+            title: "Total Users",
+            value: landingData?.data?.data?.users?.count || 0,
+            icon: <UsersRound size={40} color='#3499c5' strokeWidth={2} />
+        }
     ];
 
     return (
         <div className="flex flex-col gap-8 py-20  px-4 bg-primary bg-opacity-15 text-center">
             <h1 className='text-4xl font-bold text-black'>Our <span className='text-primary'>Metrics</span> Tell the Story</h1>
             <div className="flex justify-center gap-8 flex-wrap">
-                {stats.map((stat, index) => (
-                    <StatItem
-                        key={index}
-                        title={stat.title}
-                        value={stat.value}
-                        icon={stat.icon}
-                    />
-                ))}
+                {landingData?.data?.data && <>
+                    {stats.map((stat, index) => (
+                        <StatItem
+                            key={stat.value + index}
+                            title={stat.title}
+                            value={stat.value}
+                            icon={stat.icon}
+                        />
+                    ))}
+                </>}
             </div>
         </div>
     );

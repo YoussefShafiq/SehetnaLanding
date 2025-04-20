@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './Components/Home';
 import Notfound from './Components/Notfound';
 import { Helmet } from 'react-helmet';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 <Helmet>
   <title>Sehtnaa | Home Medical Services at Your Doorstep</title>
@@ -25,20 +26,7 @@ import { Helmet } from 'react-helmet';
 </Helmet>
 
 function App() {
-  // useEffect(() => {
-  //   // Dynamic import to handle SSR and module compatibility
-  //   const initializeWOW = async () => {
-  //     if (typeof window !== 'undefined') { // Ensure we're on client-side
-  //       const { WOW } = await import('wowjs');
-  //       new WOW({
-  //         offset: 100,
-  //         mobile: true,
-  //         live: true
-  //       }).init();
-  //     }
-  //   };
-  //   initializeWOW();
-  // }, []);
+
 
   const routers = createBrowserRouter([
     { path: "/", element: <Home /> },
@@ -46,7 +34,13 @@ function App() {
     { path: "*", element: <Notfound /> },
   ]);
 
-  return <RouterProvider router={routers} />;
+  let query = new QueryClient()
+
+  return (
+    <QueryClientProvider client={query}>
+      <RouterProvider router={routers} />
+    </QueryClientProvider>
+  );
 }
 
 export default App;

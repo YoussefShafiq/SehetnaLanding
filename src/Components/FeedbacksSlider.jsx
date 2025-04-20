@@ -3,130 +3,48 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import 'animate.css';
+import axios from 'axios';
+import { useQuery } from '@tanstack/react-query';
 
 // Static feedback data
 const feedbacks = [
     {
         id: 1,
-        name: 'Dr. Ahmed Mahmoud',
-        role: 'Medical Director',
+        user: {
+            first_name: 'Ahmed',
+            last_name: 'Mahmoud',
+            user_type: 'admin'
+        },
         location: 'Cairo',
         comment: 'The app has revolutionized how we deliver home healthcare in Egypt. The real-time nurse assignment feature works flawlessly.',
         rating: 5
     },
     {
         id: 2,
-        name: 'Nurse Yasmin Hassan',
-        role: 'Registered Nurse',
+        user: {
+            first_name: 'Ahmed',
+            last_name: 'Mahmoud',
+            user_type: 'admin'
+        },
         location: 'Alexandria',
         comment: 'As a nurse using this platform, I appreciate the clean interface and reliable notifications. My income has increased by 40% since joining.',
         rating: 5
     },
     {
         id: 3,
-        name: 'Mohamed Ali',
-        role: 'Patient',
+        user: {
+            first_name: 'Ahmed',
+            last_name: 'Mahmoud',
+            user_type: 'admin'
+        },
         location: 'Giza',
         comment: 'Used the app when my mother needed urgent care at 2 AM. A nurse arrived within 25 minutes. Lifesaving service!',
         rating: 5
-    },
-    {
-        id: 4,
-        name: 'Hospital Administrator',
-        role: 'Healthcare Manager',
-        location: 'Port Said',
-        comment: "We've integrated this with our aftercare program. The admin dashboard gives us perfect control over patient follow-ups.",
-        rating: 4
-    },
-    {
-        id: 5,
-        name: 'Nurse Samira Farouk',
-        role: 'Certified Nurse',
-        location: 'Luxor',
-        comment: 'The document verification process was smooth. I was approved within 24 hours and started receiving requests immediately.',
-        rating: 5
-    },
-    {
-        id: 6,
-        name: 'Rania Sobhy',
-        role: 'Patient',
-        location: 'Mansoura',
-        comment: 'Canceling within 3 minutes when I accidentally booked the wrong service was so easy. Very user-friendly.',
-        rating: 4
-    },
-    {
-        id: 7,
-        name: 'Dr. Karim Adel',
-        role: 'General Practitioner',
-        location: 'Aswan',
-        comment: 'The payment system works perfectly - both cash and credit card options are essential for our patients.',
-        rating: 5
-    },
-    {
-        id: 8,
-        name: 'Hanaa Mohamed',
-        role: 'Caregiver',
-        location: 'Ismailia',
-        comment: 'Scheduling recurring visits for my elderly father has never been easier. The calendar integration is perfect.',
-        rating: 5
-    },
-    {
-        id: 9,
-        name: 'Ahmed Samir',
-        role: 'Patient',
-        location: 'Tanta',
-        comment: 'The complaint section actually works! I got a response within 2 hours when I had an issue.',
-        rating: 4
-    },
-    {
-        id: 10,
-        name: 'Nurse Team Leader',
-        role: 'Senior Nurse',
-        location: 'Suez',
-        comment: 'Managing my team through the nurse app is efficient. The profile section shows all necessary credentials clearly.',
-        rating: 5
-    },
-    {
-        id: 11,
-        name: 'Lamia Gamal',
-        role: 'Pharmacist',
-        location: 'Zagazig',
-        comment: 'We recommend this app to all our chronic patients who need regular home care. The scheduling is reliable.',
-        rating: 5
-    },
-    {
-        id: 12,
-        name: 'Patient\'s Daughter',
-        role: 'Family Member',
-        location: 'Damietta',
-        comment: 'Used the immediate service feature when my father fell. The GPS tracking showed exactly when help would arrive.',
-        rating: 5
-    },
-    {
-        id: 13,
-        name: 'Nurse Trainer',
-        role: 'Healthcare Educator',
-        location: 'Minya',
-        comment: 'Training new nurses on this app takes less than 10 minutes. The interface is very intuitive.',
-        rating: 5
-    },
-    {
-        id: 14,
-        name: 'Corporate Client',
-        role: 'HR Manager',
-        location: 'New Cairo',
-        comment: 'We provide this as a benefit to our employees. The admin dashboard lets us monitor usage and costs perfectly.',
-        rating: 4
-    },
-    {
-        id: 15,
-        name: 'Elderly Patient',
-        role: 'Senior User',
-        location: 'Assiut',
-        comment: 'Even at 72 years old, I find this app easy to use. Big buttons and clear instructions make it accessible.',
-        rating: 5
     }
 ];
+
+
+
 
 
 const FeedbackCard = ({ feedback, animation }) => {
@@ -164,9 +82,9 @@ const FeedbackCard = ({ feedback, animation }) => {
                 : 'opacity-0 translate-y-10'
                 }`}
         >
-            <div className="mt-auto ">
-                <h4 className="font-semibold text-lg">{feedback.name}</h4>
-                <p className="text-gray-500 text-sm">{feedback.role}</p>
+            <div className="mt-auto capitalize">
+                <h4 className="font-semibold text-lg">{feedback.user.first_name} {feedback.user.last_name}</h4>
+                <p className="text-gray-500 text-sm">{(feedback.user.user_type === 'provider'?'doctor':feedback.user.user_type)}</p>
             </div>
             <div className="flex items-center mt-2 mb-3">
                 {[...Array(feedback.rating)].map((_, i) => (
@@ -181,6 +99,8 @@ const FeedbackCard = ({ feedback, animation }) => {
 };
 
 export default function FeedbacksSlider() {
+
+
     const [isVisible, setIsVisible] = useState(false);
     const sectionRef = useRef(null);
 
@@ -206,6 +126,15 @@ export default function FeedbacksSlider() {
             }
         };
     }, []);
+
+    function getData() {
+        return axios.get('https://api.sehtnaa.com/api/landing');
+    }
+
+    const { data: landingData } = useQuery({
+        queryKey: ['landing'],
+        queryFn: getData,
+    })
 
     const settings = {
         dots: false,
@@ -247,7 +176,7 @@ export default function FeedbacksSlider() {
         >
             <h2 className="text-4xl font-bold text-center mb-16 text-black">What Our <span className='text-primary'>Users Say</span></h2>
             <Slider {...settings}>
-                {feedbacks.map((feedback, index) => (
+                {landingData?.data?.data?.feedbacks.map((feedback, index) => (
                     <div key={feedback.id} className="px-2">
                         <FeedbackCard
                             feedback={feedback}

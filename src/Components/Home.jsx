@@ -5,6 +5,7 @@ import Stats from './Stats'
 import FeedbacksSlider from './FeedbacksSlider'
 import AppLinks from './AppLinks'
 import Footer from './Footer'
+import ContactUs from './ContactUs'
 
 export default function Home() {
     return <>
@@ -14,6 +15,7 @@ export default function Home() {
             <Stats />
             <FeedbacksSlider />
             <AppLinks />
+            <ContactUs />
             <Footer />
         </div>
     </>
