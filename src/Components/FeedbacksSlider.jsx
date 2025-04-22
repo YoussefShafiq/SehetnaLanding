@@ -84,7 +84,7 @@ const FeedbackCard = ({ feedback, animation }) => {
         >
             <div className="mt-auto capitalize">
                 <h4 className="font-semibold text-lg">{feedback.user.first_name} {feedback.user.last_name}</h4>
-                <p className="text-gray-500 text-sm">{(feedback.user.user_type === 'provider'?'doctor':feedback.user.user_type)}</p>
+                <p className="text-gray-500 text-sm">{(feedback.user.user_type === 'provider' ? 'doctor' : feedback.user.user_type)}</p>
             </div>
             <div className="flex items-center mt-2 mb-3">
                 {[...Array(feedback.rating)].map((_, i) => (
@@ -145,6 +145,8 @@ export default function FeedbacksSlider() {
         autoplay: true,
         autoplaySpeed: 2500,
         arrows: false,
+        swipeToSlide: true,
+        touchThreshold: 10,
         responsive: [
             {
                 breakpoint: 1024,

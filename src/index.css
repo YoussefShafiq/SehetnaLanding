@@ -42,5 +42,5 @@
 }
 
 * {
-    @apply selection:bg-primary selection:text-white
+    @apply selection:bg-primarydark selection:text-white
 }

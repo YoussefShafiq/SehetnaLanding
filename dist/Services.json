@@ -1,0 +1,162 @@
+[
+    {
+        "id": 101,
+        "name": "Elderly Care",
+        "icon": "👵",
+        "desc": "Comprehensive care for senior citizens including daily assistance and health monitoring",
+        "category_id": 1,
+        "category_name": "Home Nursing"
+    },
+    {
+        "id": 102,
+        "name": "Post-Op Care",
+        "icon": "🩹",
+        "desc": "Professional nursing care for patients recovering from surgery",
+        "category_id": 1,
+        "category_name": "Home Nursing"
+    },
+    {
+        "id": 103,
+        "name": "Chronic Care",
+        "icon": "🫀",
+        "desc": "Specialized care for patients with long-term health conditions",
+        "category_id": 1,
+        "category_name": "Home Nursing"
+    },
+    {
+        "id": 104,
+        "name": "Palliative Care",
+        "icon": "🛌",
+        "desc": "Comfort-focused care for patients with serious illnesses",
+        "category_id": 1,
+        "category_name": "Home Nursing"
+    },
+    {
+        "id": 201,
+        "name": "Post-Surgery Rehab",
+        "icon": "🚶",
+        "desc": "Therapeutic exercises to restore mobility after surgical procedures",
+        "category_id": 2,
+        "category_name": "Physiotherapy"
+    },
+    {
+        "id": 202,
+        "name": "Sports Injury",
+        "icon": "🏃",
+        "desc": "Rehabilitation programs for athletic injuries and performance recovery",
+        "category_id": 2,
+        "category_name": "Physiotherapy"
+    },
+    {
+        "id": 203,
+        "name": "Stroke Rehab",
+        "icon": "🧠",
+        "desc": "Specialized therapy to regain function after stroke",
+        "category_id": 2,
+        "category_name": "Physiotherapy"
+    },
+    {
+        "id": 204,
+        "name": "Pain Management",
+        "icon": "🦵",
+        "desc": "Techniques to reduce chronic pain and improve quality of life",
+        "category_id": 2,
+        "category_name": "Physiotherapy"
+    },
+    {
+        "id": 301,
+        "name": "Blood Tests",
+        "icon": "💉",
+        "desc": "Comprehensive blood analysis for health assessment",
+        "category_id": 3,
+        "category_name": "Medical Tests"
+    },
+    {
+        "id": 302,
+        "name": "ECG",
+        "icon": "📈",
+        "desc": "Electrocardiogram to monitor heart health and rhythm",
+        "category_id": 3,
+        "category_name": "Medical Tests"
+    },
+    {
+        "id": 303,
+        "name": "Urine Analysis",
+        "icon": "🧪",
+        "desc": "Diagnostic test to detect various disorders through urine examination",
+        "category_id": 3,
+        "category_name": "Medical Tests"
+    },
+    {
+        "id": 304,
+        "name": "Glucose Test",
+        "icon": "🍬",
+        "desc": "Blood sugar level measurement for diabetes management",
+        "category_id": 3,
+        "category_name": "Medical Tests"
+    },
+    {
+        "id": 401,
+        "name": "Newborn Care",
+        "icon": "🍼",
+        "desc": "Specialized care for infants in their first weeks of life",
+        "category_id": 4,
+        "category_name": "Baby Care"
+    },
+    {
+        "id": 402,
+        "name": "Vaccination",
+        "icon": "💊",
+        "desc": "Immunization services for disease prevention in children",
+        "category_id": 4,
+        "category_name": "Baby Care"
+    },
+    {
+        "id": 403,
+        "name": "Growth Monitoring",
+        "icon": "📏",
+        "desc": "Regular tracking of infant development milestones",
+        "category_id": 4,
+        "category_name": "Baby Care"
+    },
+    {
+        "id": 404,
+        "name": "Postnatal Care",
+        "icon": "🤱",
+        "desc": "Support and medical care for mothers after childbirth",
+        "category_id": 4,
+        "category_name": "Baby Care"
+    },
+    {
+        "id": 501,
+        "name": "Counseling",
+        "icon": "💬",
+        "desc": "Professional guidance for personal and emotional challenges",
+        "category_id": 5,
+        "category_name": "Mental Health"
+    },
+    {
+        "id": 502,
+        "name": "Therapy",
+        "icon": "🛋️",
+        "desc": "Evidence-based treatments for mental health conditions",
+        "category_id": 5,
+        "category_name": "Mental Health"
+    },
+    {
+        "id": 503,
+        "name": "Psychiatric Care",
+        "icon": "💊",
+        "desc": "Medical treatment for mental health disorders",
+        "category_id": 5,
+        "category_name": "Mental Health"
+    },
+    {
+        "id": 504,
+        "name": "Stress Management",
+        "icon": "🧘",
+        "desc": "Techniques and strategies to cope with daily stressors",
+        "category_id": 5,
+        "category_name": "Mental Health"
+    }
+]

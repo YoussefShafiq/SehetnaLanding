@@ -1,0 +1,168 @@
+[
+    {
+        "id": 1,
+        "name": "Home Nursing",
+        "desc": "Professional nursing care at your home",
+        "icon": "🏥",
+        "services": [
+            {
+                "id": 101,
+                "name": "Elderly Care",
+                "icon": "👵",
+                "desc": "Comprehensive care for senior citizens including daily assistance and health monitoring"
+            },
+            {
+                "id": 102,
+                "name": "Post-Op Care",
+                "icon": "🩹",
+                "desc": "Professional nursing care for patients recovering from surgery"
+            },
+            {
+                "id": 103,
+                "name": "Chronic Care",
+                "icon": "🫀",
+                "desc": "Specialized care for patients with long-term health conditions"
+            },
+            {
+                "id": 105,
+                "name": "Chronic Care 2",
+                "icon": "🫀",
+                "desc": "Specialized care for patients with long-term health conditions"
+            },
+            {
+                "id": 104,
+                "name": "Palliative Care",
+                "icon": "🛌",
+                "desc": "Comfort-focused care for patients with serious illnesses"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Physiotherapy",
+        "desc": "Rehabilitation and mobility services",
+        "icon": "💪",
+        "services": [
+            {
+                "id": 201,
+                "name": "Post-Surgery Rehab",
+                "icon": "🚶",
+                "desc": "Therapeutic exercises to restore mobility after surgical procedures"
+            },
+            {
+                "id": 202,
+                "name": "Sports Injury",
+                "icon": "🏃",
+                "desc": "Rehabilitation programs for athletic injuries and performance recovery"
+            },
+            {
+                "id": 203,
+                "name": "Stroke Rehab",
+                "icon": "🧠",
+                "desc": "Specialized therapy to regain function after stroke"
+            },
+            {
+                "id": 204,
+                "name": "Pain Management",
+                "icon": "🦵",
+                "desc": "Techniques to reduce chronic pain and improve quality of life"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Medical Tests",
+        "desc": "Comprehensive diagnostic services",
+        "icon": "🩺",
+        "services": [
+            {
+                "id": 301,
+                "name": "Blood Tests",
+                "icon": "💉",
+                "desc": "Comprehensive blood analysis for health assessment"
+            },
+            {
+                "id": 302,
+                "name": "ECG",
+                "icon": "📈",
+                "desc": "Electrocardiogram to monitor heart health and rhythm"
+            },
+            {
+                "id": 303,
+                "name": "Urine Analysis",
+                "icon": "🧪",
+                "desc": "Diagnostic test to detect various disorders through urine examination"
+            },
+            {
+                "id": 304,
+                "name": "Glucose Test",
+                "icon": "🍬",
+                "desc": "Blood sugar level measurement for diabetes management"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Baby Care",
+        "desc": "Specialized care for newborns",
+        "icon": "👶",
+        "services": [
+            {
+                "id": 401,
+                "name": "Newborn Care",
+                "icon": "🍼",
+                "desc": "Specialized care for infants in their first weeks of life"
+            },
+            {
+                "id": 402,
+                "name": "Vaccination",
+                "icon": "💊",
+                "desc": "Immunization services for disease prevention in children"
+            },
+            {
+                "id": 403,
+                "name": "Growth Monitoring",
+                "icon": "📏",
+                "desc": "Regular tracking of infant development milestones"
+            },
+            {
+                "id": 404,
+                "name": "Postnatal Care",
+                "icon": "🤱",
+                "desc": "Support and medical care for mothers after childbirth"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Mental Health",
+        "desc": "Psychological support services",
+        "icon": "🧠",
+        "services": [
+            {
+                "id": 501,
+                "name": "Counseling",
+                "icon": "💬",
+                "desc": "Professional guidance for personal and emotional challenges"
+            },
+            {
+                "id": 502,
+                "name": "Therapy",
+                "icon": "🛋️",
+                "desc": "Evidence-based treatments for mental health conditions"
+            },
+            {
+                "id": 503,
+                "name": "Psychiatric Care",
+                "icon": "💊",
+                "desc": "Medical treatment for mental health disorders"
+            },
+            {
+                "id": 504,
+                "name": "Stress Management",
+                "icon": "🧘",
+                "desc": "Techniques and strategies to cope with daily stressors"
+            }
+        ]
+    }
+]
