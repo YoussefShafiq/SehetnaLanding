@@ -2,7 +2,8 @@ import React from 'react';
 import QRCode from 'react-qr-code';
 import { FaApple, FaGooglePlay, FaDownload } from 'react-icons/fa';
 import { motion } from 'framer-motion';
-import img from '../assets/images/Mockup.svg'
+import img from '../assets/images/iPhone 12 Pro.svg'
+import { IoLogoAppleAppstore } from 'react-icons/io5';
 
 export default function AppLinks() {
     const appStoreUrl = "https://apps.apple.com/app/sehtna";
@@ -50,7 +51,7 @@ export default function AppLinks() {
                             target="_blank"
                             className="px-6 py-3 bg-black text-white rounded-xl flex items-center space-x-2"
                         >
-                            <FaApple className="text-xl" />
+                            <IoLogoAppleAppstore className="text-xl" />
                             <span>App Store</span>
                         </motion.a>
                         <motion.div
@@ -71,9 +72,68 @@ export default function AppLinks() {
                         </motion.div>
                     </div>
                 </div>
-                <div className="hidden lg:flex justify-center text-center w-1/2">
-                    <img src={img} className='w-full' />
+                <div className="flex flex-wrap justify-center gap-5">
+
+                    <div className="flex flex-col gap-5">
+                        <motion.a
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.98 }}
+                            href={playStoreUrl}
+                            target='_blank'
+                            className="px-6 py-3 bg-green-600 text-white rounded-xl flex items-center space-x-2"
+                        >
+                            <FaGooglePlay className="text-xl" />
+                            <span>Play Store</span>
+                        </motion.a>
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            className="flex-1 bg-gray-50 p-4 rounded-2xl text-center"
+                        >
+                            <div className="mx-auto w-32 h-32">
+                                <QRCode
+                                    value={playStoreUrl}
+                                    size={128}
+                                    bgColor="#ffffff"
+                                    fgColor="#000000"
+                                    level="Q"
+                                    className="w-full h-full"
+                                />
+                            </div>
+
+                        </motion.div>
+                    </div>
+                    <div className="flex flex-col gap-5">
+                        <motion.a
+                            whileHover={{ scale: 1.03 }}
+                            whileTap={{ scale: 0.98 }}
+                            href={appStoreUrl}
+                            target="_blank"
+                            className="px-6 py-3 bg-black text-white rounded-xl flex items-center space-x-2"
+                        >
+                            <IoLogoAppleAppstore className="text-xl" />
+                            <span>App Store</span>
+                        </motion.a>
+                        <motion.div
+                            whileHover={{ scale: 1.05 }}
+                            className="flex-1 bg-gray-50 p-4 rounded-2xl text-center"
+                        >
+                            <div className="mx-auto w-32 h-32">
+                                <QRCode
+                                    value={appStoreUrl}
+                                    size={128}
+                                    bgColor="#ffffff"
+                                    fgColor="#000000"
+                                    level="Q"
+                                    className="w-full h-full"
+                                />
+                            </div>
+
+                        </motion.div>
+                    </div>
                 </div>
+                {/* <div className="hidden lg:flex justify-center text-center w-1/2">
+                    <img src={img} className='w-full' />
+                </div> */}
             </div>
         </div >
     </>

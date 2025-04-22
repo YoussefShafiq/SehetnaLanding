@@ -6,16 +6,18 @@ import FeedbacksSlider from './FeedbacksSlider'
 import AppLinks from './AppLinks'
 import Footer from './Footer'
 import ContactUs from './ContactUs'
+import CategoriesSlider from './CategoriesSlider'
 
 export default function Home() {
     return <>
         <div className="overflow-hidden">
             <Hero />
             <OurFeatures />
+            <CategoriesSlider />
             <Stats />
             <FeedbacksSlider />
-            <AppLinks />
             <ContactUs />
+            <AppLinks />
             <Footer />
         </div>
     </>

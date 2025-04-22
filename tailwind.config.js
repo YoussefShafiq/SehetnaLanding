@@ -6,6 +6,12 @@ export default {
   ],
   theme: {
     extend: {
+      transformStyle: {
+        'preserve-3d': 'preserve-3d',
+      },
+      backfaceVisibility: {
+        hidden: 'hidden',
+      },
       colors: {
         primary: "#3499c5",
         secondary: "#009379",
