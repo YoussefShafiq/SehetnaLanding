@@ -8,6 +8,7 @@ import { Helmet } from 'react-helmet';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import CategoryServices from './Components/CategoryServices';
 import ServiceDetails from './Components/ServiceDetails';
+import Layout from './Components/Layout';
 
 <Helmet>
   <title>Sehtnaa | Home Medical Services at Your Doorstep</title>
@@ -33,8 +34,8 @@ function App() {
   const routers = createBrowserRouter([
     { path: "/", element: <Home /> },
     { path: "/home", element: <Home /> },
-    { path: "/category/:categoryId", element: <CategoryServices /> },
-    { path: "/service/:serviceId", element: <ServiceDetails /> },
+    { path: "/category/:categoryId", element: <Layout><CategoryServices /></Layout> },
+    { path: "/service/:serviceId", element: <Layout><ServiceDetails /></Layout> },
     { path: "*", element: <Notfound /> },
   ]);
 
