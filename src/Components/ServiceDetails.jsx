@@ -48,7 +48,7 @@ export default function ServiceDetails() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50">
+        <div className="min-h-screen bg-gray-50 p-5">
             <div className="max-w-4xl mx-auto py-8 mb-5">
                 {/* Service Header */}
                 <div className="text-center mb-12">

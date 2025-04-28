@@ -138,12 +138,13 @@ export default function FeedbacksSlider() {
 
     const settings = {
         dots: false,
-        infinite: true,
+        infinite: false,
         speed: 700,
-        slidesToShow: 4,
+        slidesToShow: 3,
+        centerMode: false,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2500,
+        autoplaySpeed: 3000,
         arrows: false,
         swipeToSlide: true,
         touchThreshold: 10,
@@ -158,6 +159,7 @@ export default function FeedbacksSlider() {
             {
                 breakpoint: 768,
                 settings: {
+                    centerMode: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }

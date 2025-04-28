@@ -111,12 +111,12 @@ const CategoriesSlider = () => {
         queryKey: ['landing'],
         queryFn: getData,
     });
-
+ 
     const settings = {
         dots: false,
         infinite: true,
         speed: 700,
-        slidesToShow: 4.5,
+        slidesToShow: 4.2,
         initialSlide: 0,
         centerMode: true,
         slidesToScroll: 1,
@@ -125,17 +125,19 @@ const CategoriesSlider = () => {
         arrows: false,
         swipeToSlide: true,
         touchThreshold: 10,
+        
         responsive: [
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 768,
                 settings: {
+                    centerMode: false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                 }

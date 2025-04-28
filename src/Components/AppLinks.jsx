@@ -14,11 +14,12 @@ export default function AppLinks() {
     return <>
         <div id='download' className="flex flex-col gap-14 items-center justify-center py-16 bg-primary p-5">
             <h1 className='text-4xl font-bold capitalize text-white text-center'>use sehtnaa app today!</h1>
-            <div className="flex gap-10 justify-around w-full items-center">
+            <div className="flex lg:flex-row flex-col gap-10 justify-around w-full items-center">
                 <div className="flex flex-col justify-center gap-5">
 
                     <h1 className='text-4xl font-bold capitalize text-white text-center'> client app</h1>
-                    <div className="flex lg:flex-row flex-col justify-center items-center gap-5">
+                    {/* client apps qr codes */}
+                    <div className="flex lg:flex-row flex-row justify-center items-center gap-5">
                         <div className="flex flex-col gap-5">
                             <motion.a
                                 whileHover={{ scale: 1.03 }}
@@ -32,9 +33,9 @@ export default function AppLinks() {
                             </motion.a>
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
-                                className="flex-1 bg-gray-50 p-4 rounded-2xl text-center"
+                                className="flex-1 bg-gray-50 p-3 mx-auto w-fit rounded-2xl text-center"
                             >
-                                <div className="mx-auto w-32 h-32">
+                                <div className="mx-auto w-24 md:w-32 transition-all aspect-square">
                                     <QRCode
                                         value={clientplayStoreUrl}
                                         size={128}
@@ -60,9 +61,9 @@ export default function AppLinks() {
                             </motion.a>
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
-                                className="flex-1 bg-gray-50 p-4 rounded-2xl text-center"
+                                className="flex-1 bg-gray-50 p-3 mx-auto w-fit rounded-2xl text-center"
                             >
-                                <div className="mx-auto w-32 h-32">
+                                <div className="mx-auto w-24 md:w-32 transition-all aspect-square">
                                     <QRCode
                                         value={clientappStoreUrl}
                                         size={128}
@@ -82,7 +83,8 @@ export default function AppLinks() {
                 </div> */}
                 <div className="flex flex-col justify-center gap-5">
                     <h1 className='text-4xl font-bold capitalize text-white text-center'> providers app</h1>
-                    <div className="flex lg:flex-row flex-col justify-center items-center gap-5">
+                    {/* provider apps qr codes */}
+                    <div className="flex lg:flex-row flex-row justify-center items-center gap-5">
                         <div className="flex flex-col gap-5">
                             <motion.a
                                 whileHover={{ scale: 1.03 }}
@@ -96,9 +98,9 @@ export default function AppLinks() {
                             </motion.a>
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
-                                className="flex-1 bg-gray-50 p-4 rounded-2xl text-center"
+                                className="flex-1 bg-gray-50 p-3 mx-auto w-fit rounded-2xl text-center"
                             >
-                                <div className="mx-auto w-32 h-32">
+                                <div className="mx-auto w-24 md:w-32 transition-all aspect-square">
                                     <QRCode
                                         value={providerplayStoreUrl}
                                         size={128}
@@ -124,9 +126,9 @@ export default function AppLinks() {
                             </motion.a>
                             <motion.div
                                 whileHover={{ scale: 1.05 }}
-                                className="flex-1 bg-gray-50 p-4 rounded-2xl text-center"
+                                className="flex-1 bg-gray-50 p-3 mx-auto w-fit rounded-2xl text-center"
                             >
-                                <div className="mx-auto w-32 h-32">
+                                <div className="mx-auto w-24 md:w-32 transition-all aspect-square">
                                     <QRCode
                                         value={providerappStoreUrl}
                                         size={128}
