@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import notFoundAnimation from '../assets/images/404 error with a tired person-pana.svg'
 import { Helmet } from 'react-helmet'
 import Layout from './Layout'
@@ -12,7 +12,11 @@ import { useNavigate } from 'react-router-dom'
 </Helmet>
 export default function Notfound() {
   const navigate = useNavigate();
+  useEffect(() => {
 
+    window.__STATUS__ = 404;
+
+  }, []);
   return <>
 
     <Layout >
