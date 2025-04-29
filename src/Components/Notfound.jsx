@@ -13,18 +13,18 @@ import { useNavigate } from 'react-router-dom'
 export default function Notfound() {
   const navigate = useNavigate();
   useEffect(() => {
-
-    window.__STATUS__ = 404;
+    navigate('/');
+    // window.__STATUS__ = 404;
 
   }, []);
   return <>
 
-    <Layout >
+    {/* <Layout >
       <div className="h-[calc(100vh-125px)] flex flex-col items-center justify-center gap-3">
         <h1 className='text-2xl font-bold'>Page Not Found | Sehtnaa</h1>
         <button onClick={() => navigate('/')} className='bg-primary hover:bg-secondary transition-all text-white  py-1 px-2 rounded-xl' >Go home</button>
       </div>
-    </Layout>
+    </Layout> */}
 
   </>
 }

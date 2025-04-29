@@ -37,7 +37,7 @@ function App() {
     { path: "/home", element: <Home /> },
     { path: "/category/:categoryId", element: <Layout><CategoryServices /></Layout> },
     { path: "/service/:serviceId", element: <Layout><ServiceDetails /></Layout> },
-    // { path: "*", element: <Notfound /> },
+    { path: "*", element: <Notfound /> },
   ]);
 
   let query = new QueryClient()
