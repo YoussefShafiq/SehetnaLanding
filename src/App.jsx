@@ -32,10 +32,11 @@ function App() {
 
 
   const routers = createBrowserRouter([
-    { path: "/", errorElement: <Notfound />, element: <Home /> },
-    { path: "/home", errorElement: <Notfound />, element: <Home /> },
-    { path: "/category/:categoryId", errorElement: <Notfound />, element: <Layout><CategoryServices /></Layout> },
-    { path: "/service/:serviceId", errorElement: <Notfound />, element: <Layout><ServiceDetails /></Layout> },
+    // { path: "/", errorElement: <Notfound />, element: <Home /> },
+    { path: "/", element: <Home /> },
+    { path: "/home", element: <Home /> },
+    { path: "/category/:categoryId", element: <Layout><CategoryServices /></Layout> },
+    { path: "/service/:serviceId", element: <Layout><ServiceDetails /></Layout> },
     // { path: "*", element: <Notfound /> },
   ]);
 
