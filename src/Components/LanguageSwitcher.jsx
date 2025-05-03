@@ -19,12 +19,12 @@ const LanguageSwitcher = () => {
         <div className="flex items-center justify-center">
             <button
                 onClick={() => changeLanguage(isEnglish ? 'ar' : 'en')}
-                className="relative flex items-center w-24 h-10 rounded-full bg-gray-100 shadow-inner cursor-pointer transition-all duration-300 hover:shadow-md focus:outline-none"
+                className="relative flex items-center w-20 h-8 rounded-full bg-gray-100 shadow-inner cursor-pointer transition-all duration-300 hover:shadow-md focus:outline-none"
                 aria-label="Toggle language"
             >
                 {/* Sliding pill */}
                 <div
-                    className={`absolute left-1 w-10 h-8 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-md transform transition-transform duration-300 ${isEnglish ? 'translate-x-0' : 'translate-x-12'
+                    className={`absolute left-1 w-8 h-6 rounded-full bg-gradient-to-r from-blue-500 to-blue-600 shadow-md transform transition-transform duration-300 ${isEnglish ? 'translate-x-0' : 'translate-x-10'
                         }`}
                 ></div>
 
