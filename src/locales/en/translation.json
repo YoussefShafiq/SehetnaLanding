@@ -1,0 +1,86 @@
+{
+    "hero": {
+        "title": "welcome to sehtnaa",
+        "subtitle": "The best app for your Health management",
+        "description": "Your comprehensive health companion that connects you with healthcare providers, tracks your wellness, and simplifies medical management.",
+        "button": "Get Started"
+    },
+    "ourFeatures": {
+        "title_w1": "our",
+        "title_w2": "Features",
+        "description": "Discover what makes our service stand out from the rest with these key features.",
+        "feature1": {
+            "title": "Quick Medical Assistance",
+            "description": "Request immediate or scheduled medical help right from your phone."
+        },
+        "feature2": {
+            "title": "Verified Nurses",
+            "description": "Only licensed and approved nurses are allowed to accept requests."
+        },
+        "feature3": {
+            "title": "Easy Access Anywhere",
+            "description": "Get medical service at home, wherever you are in the city."
+        },
+        "feature4": {
+            "title": "24/7 Availability",
+            "description": "Request help anytime – we're always here for you, day or night."
+        }
+    },
+    "ourServices": {
+        "title_w1": "Our",
+        "title_w2": "Services Categories",
+        "services": "Services"
+    },
+    "testimonials": {
+        "title_w1": "What Our ",
+        "title_w2": "Users Say "
+    },
+    "metrics": {
+        "title_w1": "our",
+        "title_w2": "Metrics ",
+        "title_w3": "Tell the Story ",
+        "users": "Requests",
+        "providers": "Providers",
+        "services": "Services",
+        "totalUsers": "Total Users"
+    },
+    "contactUs": {
+        "title_w1": "Contact",
+        "title_w2": "Us ",
+        "info": {
+            "title": "Get in Touch",
+            "email": "Email Us",
+            "call": "Call Us",
+            "address": "Visit Us",
+            "hours": "Bussiness Hours"
+        },
+        "form": {
+            "name": "Name",
+            "email": "Email",
+            "subject": "Subject",
+            "message": "Message",
+            "submit": "send message"
+        }
+    },
+    "appLinks": {
+        "title": "Use Sehtnaa App Today!",
+        "clientApp": "Client App",
+        "providerApp": "Provider App",
+        "playStore": "Play Store",
+        "appStore": "App Store"
+    },
+    "CategoryServices": {
+        "ViewDetails": "View Details"
+    },
+    "ServiceDetails": {
+        "ServiceDetails": "Service Details",
+        "Avilable": "Avilable",
+        "Description": "Description",
+        "Category": "Category",
+        "Whats_Included": "What's Included",
+        "include_1": "Initial consultation with our specialist",
+        "include_2": "Personalized treatment plan",
+        "include_3": "Regular progress tracking",
+        "include_4": "24/7 customer support"
+    }
+}

@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function ContactUs() {
+    const { t } = useTranslation();
     const contactData = {
         email: 'support@sehtnaa.com',
         phone: '+201012345678',
@@ -36,7 +38,7 @@ export default function ContactUs() {
         <div className="py-20 px-4 bg-primary bg-opacity-15">
             <div className="max-w-6xl mx-auto">
                 <h1 className="text-4xl font-bold text-center mb-12">
-                    Contact <span className="text-primary">Us</span>
+                    {t('contactUs.title_w1')} <span className="text-primary">{t('contactUs.title_w2')}</span>
                 </h1>
 
                 <div className="flex flex-col md:flex-row gap-12">
@@ -45,7 +47,7 @@ export default function ContactUs() {
                         <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-lg">
                             <div className="mb-6">
                                 <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
-                                    Your Name
+                                    {t('contactUs.form.name')}
                                 </label>
                                 <input
                                     type="text"
@@ -60,7 +62,7 @@ export default function ContactUs() {
 
                             <div className="mb-6">
                                 <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
-                                    Your Email
+                                    {t('contactUs.form.email')}
                                 </label>
                                 <input
                                     type="email"
@@ -75,7 +77,7 @@ export default function ContactUs() {
 
                             <div className="mb-6">
                                 <label htmlFor="subject" className="block text-gray-700 font-medium mb-2">
-                                    Subject
+                                    {t('contactUs.form.subject')}
                                 </label>
                                 <input
                                     type="text"
@@ -90,7 +92,7 @@ export default function ContactUs() {
 
                             <div className="mb-6">
                                 <label htmlFor="message" className="block text-gray-700 font-medium mb-2">
-                                    Message
+                                    {t('contactUs.form.message')}
                                 </label>
                                 <textarea
                                     id="message"
@@ -107,7 +109,7 @@ export default function ContactUs() {
                                 type="submit"
                                 className="w-full bg-primary text-white py-3 px-6 rounded-md hover:bg-primary-dark transition duration-300 font-medium"
                             >
-                                Send Message
+                                {t('contactUs.form.submit')}
                             </button>
                         </form>
                     </div>
@@ -115,7 +117,7 @@ export default function ContactUs() {
                     {/* Contact Info */}
                     <div className="w-full md:w-1/2">
                         <div className="bg-white p-8 rounded-lg shadow-lg h-full">
-                            <h2 className="text-2xl font-bold mb-6 text-gray-800">Get in Touch</h2>
+                            <h2 className="text-2xl font-bold mb-6 text-gray-800">{t('contactUs.info.title')}</h2>
 
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
@@ -123,7 +125,7 @@ export default function ContactUs() {
                                         <Mail className="text-primary" size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-medium text-lg text-gray-800">Email Us</h3>
+                                        <h3 className="font-medium text-lg text-gray-800">{t('contactUs.info.email')}</h3>
                                         <p className="text-gray-600">{contactData.email}</p>
                                     </div>
                                 </div>
@@ -133,7 +135,7 @@ export default function ContactUs() {
                                         <Phone className="text-primary" size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-medium text-lg text-gray-800">Call Us</h3>
+                                        <h3 className="font-medium text-lg text-gray-800">{t('contactUs.info.call')}</h3>
                                         <p className="text-gray-600">{contactData.phone}</p>
                                     </div>
                                 </div>
@@ -143,14 +145,14 @@ export default function ContactUs() {
                                         <MapPin className="text-primary" size={24} />
                                     </div>
                                     <div>
-                                        <h3 className="font-medium text-lg text-gray-800">Visit Us</h3>
+                                        <h3 className="font-medium text-lg text-gray-800"> {t('contactUs.info.address')}</h3>
                                         <p className="text-gray-600">{contactData.address}</p>
                                     </div>
                                 </div>
                             </div>
 
                             <div className="mt-8">
-                                <h3 className="font-medium text-lg mb-4 text-gray-800">Business Hours</h3>
+                                <h3 className="font-medium text-lg mb-4 text-gray-800">{t('contactUs.info.hours')}</h3>
                                 <ul className="space-y-2 text-gray-600 capitalize">
                                     <li className="flex justify-between">
                                         <span>sunday - thursday</span>

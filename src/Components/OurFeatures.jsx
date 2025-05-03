@@ -1,32 +1,35 @@
 import React, { useRef, useEffect, useState } from 'react';
 import img from '../assets/images/Visuals.png';
 import { Heart, Zap, Shield, Globe, Clock } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function OurFeatures() {
+    const { t } = useTranslation();
+
     const features = [
         {
-            title: "Quick Medical Assistance",
+            title: t('ourFeatures.feature1.title'),
             icon: <Zap color='#3499c5' />,
             animation: "animate__fadeInTopLeft",
-            description: "Request immediate or scheduled medical help right from your phone.",
+            description: t('ourFeatures.feature1.description'),
         },
         {
-            title: "Verified Nurses",
+            title: t('ourFeatures.feature2.title'),
             icon: <Shield color='#3499c5' />,
             animation: "animate__fadeInTopRight",
-            description: "Only licensed and approved nurses are allowed to accept requests.",
+            description: t('ourFeatures.feature2.description'),
         },
         {
-            title: "Easy Access Anywhere",
+            title: t('ourFeatures.feature3.title'),
             icon: <Globe color='#3499c5' />,
             animation: "animate__fadeInBottomLeft",
-            description: "Get medical service at home, wherever you are in the city.",
+            description: t('ourFeatures.feature3.description'),
         },
         {
-            title: "24/7 Availability",
+            title: t('ourFeatures.feature4.title'),
             icon: <Clock color='#3499c5' />,
             animation: "animate__fadeInBottomRight",
-            description: "Request help anytime – we're always here for you, day or night.",
+            description: t('ourFeatures.feature4.description'),
         }
     ];
 
@@ -43,11 +46,11 @@ export default function OurFeatures() {
 
             <div className="w-full lg:w-3/5 flex flex-col gap-5 text-black">
                 <h1 className="text-4xl sm:text-5xl font-bold">
-                    Our <span className="text-primary">Features</span>
+                    {t('ourFeatures.title_w1')} <span className="text-primary"> {t('ourFeatures.title_w2')}</span>
                 </h1>
 
                 <p className='text-lg text-gray-600'>
-                    Discover what makes our service stand out from the rest with these key features.
+                    {t('ourFeatures.description')}
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">

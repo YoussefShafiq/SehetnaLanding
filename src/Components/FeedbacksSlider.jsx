@@ -5,44 +5,7 @@ import 'slick-carousel/slick/slick-theme.css';
 import 'animate.css';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
-
-// Static feedback data
-const feedbacks = [
-    {
-        id: 1,
-        user: {
-            first_name: 'Ahmed',
-            last_name: 'Mahmoud',
-            user_type: 'admin'
-        },
-        location: 'Cairo',
-        comment: 'The app has revolutionized how we deliver home healthcare in Egypt. The real-time nurse assignment feature works flawlessly.',
-        rating: 5
-    },
-    {
-        id: 2,
-        user: {
-            first_name: 'Ahmed',
-            last_name: 'Mahmoud',
-            user_type: 'admin'
-        },
-        location: 'Alexandria',
-        comment: 'As a nurse using this platform, I appreciate the clean interface and reliable notifications. My income has increased by 40% since joining.',
-        rating: 5
-    },
-    {
-        id: 3,
-        user: {
-            first_name: 'Ahmed',
-            last_name: 'Mahmoud',
-            user_type: 'admin'
-        },
-        location: 'Giza',
-        comment: 'Used the app when my mother needed urgent care at 2 AM. A nurse arrived within 25 minutes. Lifesaving service!',
-        rating: 5
-    }
-];
-
+import { useTranslation } from 'react-i18next';
 
 
 
@@ -99,6 +62,7 @@ const FeedbackCard = ({ feedback, animation }) => {
 };
 
 export default function FeedbacksSlider() {
+    const { t } = useTranslation();
 
 
     const [isVisible, setIsVisible] = useState(false);
@@ -178,7 +142,7 @@ export default function FeedbacksSlider() {
             className={`py-12 px-4 bg-white h-fit transition-all duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'
                 }`}
         >
-            <h2 className="text-4xl font-bold text-center mb-16 text-black">What Our <span className='text-primary'>Users Say</span></h2>
+            <h2 className="text-4xl font-bold text-center mb-16 text-black"> {t('testimonials.title_w1')} <span className='text-primary'> {t('testimonials.title_w2')} </span></h2>
             <Slider {...settings}>
                 {landingData?.data?.data?.feedbacks.map((feedback, index) => (
                     <div key={feedback.id} className="px-2">

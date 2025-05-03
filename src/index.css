@@ -44,3 +44,13 @@
 * {
     @apply selection:bg-primarydark selection:text-white
 }
+
+[dir="rtl"] {
+    text-align: right;
+}
+
+/* You might need to adjust other elements specifically for RTL */
+[dir="rtl"] .navbar-nav {
+    margin-right: auto;
+    margin-left: 0;
+}

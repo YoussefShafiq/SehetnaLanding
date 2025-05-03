@@ -1,168 +1,326 @@
-[
-    {
-        "id": 1,
-        "name": "Home Nursing",
-        "desc": "Professional nursing care at your home",
-        "icon": "🏥",
-        "services": [
-            {
-                "id": 101,
-                "name": "Elderly Care",
-                "icon": "👵",
-                "desc": "Comprehensive care for senior citizens including daily assistance and health monitoring"
+{
+    "services": [
+        {
+            "id": 1,
+            "name": {
+                "en": "Home Nursing",
+                "ar": "تمريض منزلي"
             },
-            {
-                "id": 102,
-                "name": "Post-Op Care",
-                "icon": "🩹",
-                "desc": "Professional nursing care for patients recovering from surgery"
+            "desc": {
+                "en": "Professional nursing care at your home",
+                "ar": "رعاية تمريضية محترفة في منزلك"
             },
-            {
-                "id": 103,
-                "name": "Chronic Care",
-                "icon": "🫀",
-                "desc": "Specialized care for patients with long-term health conditions"
+            "icon": "🏥",
+            "services": [
+                {
+                    "id": 101,
+                    "name": {
+                        "en": "Elderly Care",
+                        "ar": "رعاية المسنين"
+                    },
+                    "icon": "👵",
+                    "desc": {
+                        "en": "Comprehensive care for senior citizens including daily assistance and health monitoring",
+                        "ar": "رعاية شاملة لكبار السن تشمل المساعدة اليومية ومراقبة الحالة الصحية"
+                    }
+                },
+                {
+                    "id": 102,
+                    "name": {
+                        "en": "Post-Op Care",
+                        "ar": "رعاية ما بعد الجراحة"
+                    },
+                    "icon": "🩹",
+                    "desc": {
+                        "en": "Professional nursing care for patients recovering from surgery",
+                        "ar": "رعاية تمريضية محترفة للمرضى أثناء تعافيهم بعد العمليات الجراحية"
+                    }
+                },
+                {
+                    "id": 103,
+                    "name": {
+                        "en": "Chronic Care",
+                        "ar": "رعاية الأمراض المزمنة"
+                    },
+                    "icon": "🫀",
+                    "desc": {
+                        "en": "Specialized care for patients with long-term health conditions",
+                        "ar": "رعاية متخصصة للمرضى الذين يعانون من حالات صحية مزمنة"
+                    }
+                },
+                {
+                    "id": 105,
+                    "name": {
+                        "en": "Chronic Care 2",
+                        "ar": "رعاية الأمراض المزمنة ٢"
+                    },
+                    "icon": "🫀",
+                    "desc": {
+                        "en": "Specialized care for patients with long-term health conditions",
+                        "ar": "رعاية متخصصة للمرضى الذين يعانون من حالات صحية مزمنة"
+                    }
+                },
+                {
+                    "id": 104,
+                    "name": {
+                        "en": "Palliative Care",
+                        "ar": "رعاية تلطيفية"
+                    },
+                    "icon": "🛌",
+                    "desc": {
+                        "en": "Comfort-focused care for patients with serious illnesses",
+                        "ar": "رعاية تركز على الراحة للمرضى الذين يعانون من أمراض خطيرة"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": {
+                "en": "Physiotherapy",
+                "ar": "العلاج الطبيعي"
             },
-            {
-                "id": 105,
-                "name": "Chronic Care 2",
-                "icon": "🫀",
-                "desc": "Specialized care for patients with long-term health conditions"
+            "desc": {
+                "en": "Rehabilitation and mobility services",
+                "ar": "خدمات إعادة التأهيل وتحسين الحركة"
             },
-            {
-                "id": 104,
-                "name": "Palliative Care",
-                "icon": "🛌",
-                "desc": "Comfort-focused care for patients with serious illnesses"
-            }
-        ]
-    },
-    {
-        "id": 2,
-        "name": "Physiotherapy",
-        "desc": "Rehabilitation and mobility services",
-        "icon": "💪",
-        "services": [
-            {
-                "id": 201,
-                "name": "Post-Surgery Rehab",
-                "icon": "🚶",
-                "desc": "Therapeutic exercises to restore mobility after surgical procedures"
+            "icon": "💪",
+            "services": [
+                {
+                    "id": 201,
+                    "name": {
+                        "en": "Post-Surgery Rehab",
+                        "ar": "إعادة تأهيل ما بعد الجراحة"
+                    },
+                    "icon": "🚶",
+                    "desc": {
+                        "en": "Therapeutic exercises to restore mobility after surgical procedures",
+                        "ar": "تمارين علاجية لاستعادة الحركة بعد الإجراءات الجراحية"
+                    }
+                },
+                {
+                    "id": 202,
+                    "name": {
+                        "en": "Sports Injury",
+                        "ar": "إصابات رياضية"
+                    },
+                    "icon": "🏃",
+                    "desc": {
+                        "en": "Rehabilitation programs for athletic injuries and performance recovery",
+                        "ar": "برامج إعادة تأهيل للإصابات الرياضية واستعادة الأداء"
+                    }
+                },
+                {
+                    "id": 203,
+                    "name": {
+                        "en": "Stroke Rehab",
+                        "ar": "إعادة تأهيل بعد السكتة"
+                    },
+                    "icon": "🧠",
+                    "desc": {
+                        "en": "Specialized therapy to regain function after stroke",
+                        "ar": "علاج متخصص لاستعادة الوظائف بعد السكتة الدماغية"
+                    }
+                },
+                {
+                    "id": 204,
+                    "name": {
+                        "en": "Pain Management",
+                        "ar": "إدارة الألم"
+                    },
+                    "icon": "🦵",
+                    "desc": {
+                        "en": "Techniques to reduce chronic pain and improve quality of life",
+                        "ar": "تقنيات لتقليل الألم المزمن وتحسين جودة الحياة"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": {
+                "en": "Medical Tests",
+                "ar": "فحوصات طبية"
             },
-            {
-                "id": 202,
-                "name": "Sports Injury",
-                "icon": "🏃",
-                "desc": "Rehabilitation programs for athletic injuries and performance recovery"
+            "desc": {
+                "en": "Comprehensive diagnostic services",
+                "ar": "خدمات تشخيصية شاملة"
             },
-            {
-                "id": 203,
-                "name": "Stroke Rehab",
-                "icon": "🧠",
-                "desc": "Specialized therapy to regain function after stroke"
+            "icon": "🩺",
+            "services": [
+                {
+                    "id": 301,
+                    "name": {
+                        "en": "Blood Tests",
+                        "ar": "فحوصات الدم"
+                    },
+                    "icon": "💉",
+                    "desc": {
+                        "en": "Comprehensive blood analysis for health assessment",
+                        "ar": "تحليل شامل للدم لتقييم الحالة الصحية"
+                    }
+                },
+                {
+                    "id": 302,
+                    "name": {
+                        "en": "ECG",
+                        "ar": "رسم قلب"
+                    },
+                    "icon": "📈",
+                    "desc": {
+                        "en": "Electrocardiogram to monitor heart health and rhythm",
+                        "ar": "تخطيط كهربائية القلب لمراقبة صحة القلب وإيقاعه"
+                    }
+                },
+                {
+                    "id": 303,
+                    "name": {
+                        "en": "Urine Analysis",
+                        "ar": "تحليل البول"
+                    },
+                    "icon": "🧪",
+                    "desc": {
+                        "en": "Diagnostic test to detect various disorders through urine examination",
+                        "ar": "فحص تشخيصي للكشف عن الاضطرابات المختلفة من خلال تحليل البول"
+                    }
+                },
+                {
+                    "id": 304,
+                    "name": {
+                        "en": "Glucose Test",
+                        "ar": "فحص السكر"
+                    },
+                    "icon": "🍬",
+                    "desc": {
+                        "en": "Blood sugar level measurement for diabetes management",
+                        "ar": "قياس مستوى السكر في الدم لإدارة مرض السكري"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": {
+                "en": "Baby Care",
+                "ar": "رعاية الرضع"
             },
-            {
-                "id": 204,
-                "name": "Pain Management",
-                "icon": "🦵",
-                "desc": "Techniques to reduce chronic pain and improve quality of life"
-            }
-        ]
-    },
-    {
-        "id": 3,
-        "name": "Medical Tests",
-        "desc": "Comprehensive diagnostic services",
-        "icon": "🩺",
-        "services": [
-            {
-                "id": 301,
-                "name": "Blood Tests",
-                "icon": "💉",
-                "desc": "Comprehensive blood analysis for health assessment"
+            "desc": {
+                "en": "Specialized care for newborns",
+                "ar": "رعاية متخصصة للمواليد الجدد"
             },
-            {
-                "id": 302,
-                "name": "ECG",
-                "icon": "📈",
-                "desc": "Electrocardiogram to monitor heart health and rhythm"
+            "icon": "👶",
+            "services": [
+                {
+                    "id": 401,
+                    "name": {
+                        "en": "Newborn Care",
+                        "ar": "رعاية المواليد"
+                    },
+                    "icon": "🍼",
+                    "desc": {
+                        "en": "Specialized care for infants in their first weeks of life",
+                        "ar": "رعاية متخصصة للرضع في أسابيعهم الأولى من الحياة"
+                    }
+                },
+                {
+                    "id": 402,
+                    "name": {
+                        "en": "Vaccination",
+                        "ar": "التطعيمات"
+                    },
+                    "icon": "💊",
+                    "desc": {
+                        "en": "Immunization services for disease prevention in children",
+                        "ar": "خدمات التطعيم للوقاية من الأمراض لدى الأطفال"
+                    }
+                },
+                {
+                    "id": 403,
+                    "name": {
+                        "en": "Growth Monitoring",
+                        "ar": "مراقبة النمو"
+                    },
+                    "icon": "📏",
+                    "desc": {
+                        "en": "Regular tracking of infant development milestones",
+                        "ar": "متابعة منتظمة لمراحل تطور الرضيع"
+                    }
+                },
+                {
+                    "id": 404,
+                    "name": {
+                        "en": "Postnatal Care",
+                        "ar": "رعاية ما بعد الولادة"
+                    },
+                    "icon": "🤱",
+                    "desc": {
+                        "en": "Support and medical care for mothers after childbirth",
+                        "ar": "دعم ورعاية طبية للأمهات بعد الولادة"
+                    }
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": {
+                "en": "Mental Health",
+                "ar": "الصحة النفسية"
             },
-            {
-                "id": 303,
-                "name": "Urine Analysis",
-                "icon": "🧪",
-                "desc": "Diagnostic test to detect various disorders through urine examination"
+            "desc": {
+                "en": "Psychological support services",
+                "ar": "خدمات الدعم النفسي"
             },
-            {
-                "id": 304,
-                "name": "Glucose Test",
-                "icon": "🍬",
-                "desc": "Blood sugar level measurement for diabetes management"
-            }
-        ]
-    },
-    {
-        "id": 4,
-        "name": "Baby Care",
-        "desc": "Specialized care for newborns",
-        "icon": "👶",
-        "services": [
-            {
-                "id": 401,
-                "name": "Newborn Care",
-                "icon": "🍼",
-                "desc": "Specialized care for infants in their first weeks of life"
-            },
-            {
-                "id": 402,
-                "name": "Vaccination",
-                "icon": "💊",
-                "desc": "Immunization services for disease prevention in children"
-            },
-            {
-                "id": 403,
-                "name": "Growth Monitoring",
-                "icon": "📏",
-                "desc": "Regular tracking of infant development milestones"
-            },
-            {
-                "id": 404,
-                "name": "Postnatal Care",
-                "icon": "🤱",
-                "desc": "Support and medical care for mothers after childbirth"
-            }
-        ]
-    },
-    {
-        "id": 5,
-        "name": "Mental Health",
-        "desc": "Psychological support services",
-        "icon": "🧠",
-        "services": [
-            {
-                "id": 501,
-                "name": "Counseling",
-                "icon": "💬",
-                "desc": "Professional guidance for personal and emotional challenges"
-            },
-            {
-                "id": 502,
-                "name": "Therapy",
-                "icon": "🛋️",
-                "desc": "Evidence-based treatments for mental health conditions"
-            },
-            {
-                "id": 503,
-                "name": "Psychiatric Care",
-                "icon": "💊",
-                "desc": "Medical treatment for mental health disorders"
-            },
-            {
-                "id": 504,
-                "name": "Stress Management",
-                "icon": "🧘",
-                "desc": "Techniques and strategies to cope with daily stressors"
-            }
-        ]
-    }
-]
+            "icon": "🧠",
+            "services": [
+                {
+                    "id": 501,
+                    "name": {
+                        "en": "Counseling",
+                        "ar": "استشارات نفسية"
+                    },
+                    "icon": "💬",
+                    "desc": {
+                        "en": "Professional guidance for personal and emotional challenges",
+                        "ar": "توجيه مهني للتحديات الشخصية والعاطفية"
+                    }
+                },
+                {
+                    "id": 502,
+                    "name": {
+                        "en": "Therapy",
+                        "ar": "العلاج النفسي"
+                    },
+                    "icon": "🛋️",
+                    "desc": {
+                        "en": "Evidence-based treatments for mental health conditions",
+                        "ar": "علاجات مبنية على الأدلة للحالات النفسية"
+                    }
+                },
+                {
+                    "id": 503,
+                    "name": {
+                        "en": "Psychiatric Care",
+                        "ar": "رعاية نفسية"
+                    },
+                    "icon": "💊",
+                    "desc": {
+                        "en": "Medical treatment for mental health disorders",
+                        "ar": "علاج طبي لاضطرابات الصحة النفسية"
+                    }
+                },
+                {
+                    "id": 504,
+                    "name": {
+                        "en": "Stress Management",
+                        "ar": "إدارة التوتر"
+                    },
+                    "icon": "🧘",
+                    "desc": {
+                        "en": "Techniques and strategies to cope with daily stressors",
+                        "ar": "تقنيات واستراتيجيات للتعامل مع ضغوط الحياة اليومية"
+                    }
+                }
+            ]
+        }
+    ]
+}

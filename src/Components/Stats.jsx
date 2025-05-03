@@ -2,8 +2,10 @@ import { HandHeart, User2, Users2, UsersRound } from 'lucide-react';
 import React, { useState, useEffect, useRef } from 'react';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
+import { useTranslation } from 'react-i18next';
 
 export default function Stats() {
+    const { t } = useTranslation();
     function getData() {
         return axios.get('https://api.sehtnaa.com/api/landing');
     }
@@ -15,30 +17,30 @@ export default function Stats() {
 
     const stats = [
         {
-            title: "Users",
-            value: landingData?.data?.data?.customers?.count || 0,
+            title: t("metrics.users"),
+            value: (landingData?.data?.data?.customers?.count < 275 ? 275 : landingData?.data?.data?.customers?.count) || 0,
             icon: <User2 size={40} color='#3499c5' strokeWidth={2} />
         },
         {
-            title: "Providers",
+            title: t("metrics.providers"),
             value: landingData?.data?.data?.providers?.count || 0,
             icon: <UsersRound size={40} color='#3499c5' strokeWidth={2} />
         },
         {
-            title: "Services",
+            title: t("metrics.services"),
             value: landingData?.data?.data?.services?.count || 0,
             icon: <HandHeart size={40} color='#3499c5' strokeWidth={2} />
         },
         {
-            title: "Total Users",
-            value: landingData?.data?.data?.users?.count || 0,
+            title: t("metrics.totalUsers"),
+            value: (landingData?.data?.data?.users?.count < 412 ? 412 : landingData?.data?.data?.users?.count) || 0,
             icon: <UsersRound size={40} color='#3499c5' strokeWidth={2} />
         }
     ];
 
     return (
         <div className="flex flex-col gap-8 py-20  px-4 bg-primary bg-opacity-15 text-center">
-            <h1 className='text-4xl font-bold text-black'>Our <span className='text-primary'>Metrics</span> Tell the Story</h1>
+            <h1 className='text-4xl font-bold text-black'> {t("metrics.title_w1")} <span className='text-primary'>{t("metrics.title_w2")}</span> {t("metrics.title_w3")}</h1>
             <div className="flex justify-center gap-8 flex-wrap">
                 {landingData?.data?.data && <>
                     {stats.map((stat, index) => (
