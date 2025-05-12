@@ -10,7 +10,7 @@ import CategoriesSlider from './CategoriesSlider'
 
 export default function Home() {
     return <>
-        <div className="overflow-hidden">
+        <div className="overflow-hidden font-ultima">
             <Hero />
             <OurFeatures />
             <CategoriesSlider />

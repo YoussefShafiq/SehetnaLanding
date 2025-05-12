@@ -38,11 +38,40 @@ export default function CategoryServices() {
 
 
     if (categoryLoading) {
-        return (
-            <div className="flex justify-center items-center h-64">
-                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+        return <>
+            <div className="min-h-screen px-4 sm:px-6 lg:px-8 py-8">
+                {/* Category Header Skeleton */}
+                <div className="mb-8 text-center">
+                    <div className="h-10 bg-gray-200 rounded-lg w-1/5 mx-auto animate-pulse"></div>
+                    <div className="h-5 bg-gray-200 rounded-lg w-1/3 mx-auto mt-3 animate-pulse"></div>
+                </div>
+
+                {/* Services Grid Skeleton */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    {[...Array(8)].map((_, index) => (
+                        <div
+                            key={index}
+                            className="bg-white rounded-xl shadow-md overflow-hidden animate-pulse"
+                        >
+                            <div className="p-6 text-center">
+                                {/* Icon Skeleton */}
+                                <div className="flex justify-center mb-4">
+                                    <div className="h-16 w-16 bg-gray-200 rounded-full"></div>
+                                </div>
+
+                                {/* Title Skeleton */}
+                                <div className="h-6 bg-gray-200 rounded-lg w-3/4 mx-auto mb-3"></div>
+
+                                {/* Button Skeleton */}
+                                <div className="h-10 bg-gray-200 rounded-lg mt-4 w-full"></div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
             </div>
-        );
+
+
+        </>
     }
 
     if (categoryError) {
@@ -82,36 +111,6 @@ export default function CategoryServices() {
                     ))}
                 </div>
 
-                {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {selectedCategory.services.map(service => (
-                        <div
-                            key={service.id}
-                            className="bg-white rounded-2xl shadow-xl overflow-hidden flex flex-col h-full"
-                        >
-                            <div className="flex flex-col md:flex-row-reverse p-6 gap-6 h-full">
-                                <div className="flex-shrink-0 flex items-center justify-center md:w-1/5">
-                                    <div className="bg-primary w-20 h-20 md:w-24 md:h-24 flex items-center justify-center rounded-full">
-                                        <span className="text-2xl">{service.icon}</span>
-                                    </div>
-                                </div>
-
-                                <div className="flex-grow flex flex-col">
-                                    <div className="mb-4">
-                                        <h2 className="text-xl font-bold text-gray-900">{service.name}</h2>
-                                    </div>
-
-                                    <div className="flex-grow">
-                                        <p className="text-gray-600 leading-relaxed mb-4">
-                                            {service.desc}
-                                        </p>
-                                    </div>
-
-
-                                </div>
-                            </div>
-                        </div>
-                    ))}
-                </div> */}
             </div>
 
         </div>

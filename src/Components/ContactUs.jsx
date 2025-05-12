@@ -6,7 +6,7 @@ export default function ContactUs() {
     const { t } = useTranslation();
     const contactData = {
         email: 'support@sehtnaa.com',
-        phone: '+201012345678',
+        phone: '+20 10 24600655',
         address: 'Cairo, Egypt'
     }
 
@@ -126,7 +126,7 @@ export default function ContactUs() {
                                     </div>
                                     <div>
                                         <h3 className="font-medium text-lg text-gray-800">{t('contactUs.info.email')}</h3>
-                                        <p className="text-gray-600">{contactData.email}</p>
+                                        <p className="text-gray-600">{t('contactUs.contactData.email')}</p>
                                     </div>
                                 </div>
 
@@ -136,7 +136,7 @@ export default function ContactUs() {
                                     </div>
                                     <div>
                                         <h3 className="font-medium text-lg text-gray-800">{t('contactUs.info.call')}</h3>
-                                        <p className="text-gray-600">{contactData.phone}</p>
+                                        <p className="text-gray-600" style={{ direction: 'ltr' }}>{t('contactUs.contactData.phone')}</p>
                                     </div>
                                 </div>
 
@@ -146,7 +146,7 @@ export default function ContactUs() {
                                     </div>
                                     <div>
                                         <h3 className="font-medium text-lg text-gray-800"> {t('contactUs.info.address')}</h3>
-                                        <p className="text-gray-600">{contactData.address}</p>
+                                        <p className="text-gray-600">{t('contactUs.contactData.address')}</p>
                                     </div>
                                 </div>
                             </div>
@@ -154,18 +154,13 @@ export default function ContactUs() {
                             <div className="mt-8">
                                 <h3 className="font-medium text-lg mb-4 text-gray-800">{t('contactUs.info.hours')}</h3>
                                 <ul className="space-y-2 text-gray-600 capitalize">
+
                                     <li className="flex justify-between">
-                                        <span>sunday - thursday</span>
-                                        <span>9:00 AM - 5:00 PM</span>
+                                        <span>{t('contactUs.BussinessHours.day')}</span>
+                                        <span>{t('contactUs.BussinessHours.time')}</span>
                                     </li>
-                                    <li className="flex justify-between">
-                                        <span>Saturday</span>
-                                        <span>10:00 AM - 2:00 PM</span>
-                                    </li>
-                                    <li className="flex justify-between">
-                                        <span>friday</span>
-                                        <span>Closed</span>
-                                    </li>
+
+
                                 </ul>
                             </div>
                         </div>

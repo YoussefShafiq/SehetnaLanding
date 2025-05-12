@@ -44,9 +44,9 @@ export default function Hero() {
 
             {/* Hero Content */}
             <div className="flex flex-col lg:flex-row justify-between items-center px-4 sm:px-8 mt-10 sm:mt-5 lg:mt-0 flex-grow">
-                <div className={`flex flex-col gap-3 sm:gap-5 w-full lg:w-1/2 transition-all duration-1000 delay-100 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                <div className={`flex flex-col  gap-3 sm:gap-5 w-full lg:w-1/2 transition-all duration-1000 delay-100 ${animated ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
                     }`}>
-                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+                    <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white capitalize">
                         {t('hero.title')}
                     </h1>
                     <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">

@@ -60,6 +60,15 @@
             "subject": "Subject",
             "message": "Message",
             "submit": "send message"
+        },
+        "contactData": {
+            "phone": "+20 10 24600655",
+            "email": "support@sehtnaa.com",
+            "address": "6th of October City, Central Axis Road"
+        },
+        "BussinessHours": {
+            "day": "Everyday",
+            "time": "24 hours"
         }
     },
     "appLinks": {

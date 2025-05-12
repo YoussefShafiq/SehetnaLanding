@@ -61,6 +61,15 @@
             "subject": "الموضوع",
             "message": "الرسالة",
             "submit": "إرسال الرسالة"
+        },
+        "contactData": {
+            "phone": "+20 10 24600655",
+            "email": "support@sehtnaa.com",
+            "address": "مدينة 6 اكتوبر المحور المركزي"
+        },
+        "BussinessHours": {
+            "day": "يومياً",
+            "time": "24 ساعة"
         }
     },
     "appLinks": {

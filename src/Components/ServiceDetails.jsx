@@ -31,11 +31,72 @@ export default function ServiceDetails() {
     }, []);
 
     if (ServiceLoading) {
-        return (
-            <div className="flex justify-center items-center min-h-screen">
-                <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-primary"></div>
+        return <>
+            <div className="max-w-4xl mx-auto py-8 mb-5">
+                {/* Service Header Skeleton */}
+                <div className="text-center mb-12">
+                    <div className="inline-block mb-4">
+                        <div className="h-16 w-16 bg-gray-200 rounded-full mx-auto animate-pulse"></div>
+                    </div>
+                    <div className="h-10 bg-gray-200 rounded-lg w-3/4 mx-auto mb-3 animate-pulse"></div>
+                    <div className="h-6 bg-gray-200 rounded-lg w-2/3 mx-auto mb-3 animate-pulse"></div>
+                    <div className="h-4 bg-gray-200 rounded-lg w-1/4 mx-auto mt-4 animate-pulse"></div>
+                </div>
+
+                {/* Service Details Card Skeleton */}
+                <div className="bg-white rounded-2xl shadow-xl overflow-hidden animate-pulse">
+                    <div className="md:flex">
+                        {/* Image Section Skeleton */}
+                        <div className="md:w-1/3 bg-gray-200 p-12 flex items-center justify-center">
+                            <div className="w-full h-64 bg-gray-300 rounded-lg"></div>
+                        </div>
+
+                        {/* Content Section Skeleton */}
+                        <div className="md:w-2/3 p-8 md:p-12">
+                            <div className="flex items-center mb-6">
+                                <div className="h-8 bg-gray-200 rounded-lg w-1/3"></div>
+                                <div className="ml-auto h-6 bg-gray-200 rounded-full w-20"></div>
+                            </div>
+
+                            <div className="space-y-6">
+                                {/* Description Skeleton */}
+                                <div>
+                                    <div className="h-6 bg-gray-200 rounded-lg w-1/4 mb-3"></div>
+                                    <div className="space-y-2">
+                                        <div className="h-4 bg-gray-200 rounded-lg w-full"></div>
+                                        <div className="h-4 bg-gray-200 rounded-lg w-5/6"></div>
+                                        <div className="h-4 bg-gray-200 rounded-lg w-2/3"></div>
+                                    </div>
+                                </div>
+
+                                {/* Category Skeleton */}
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div>
+                                        <div className="h-6 bg-gray-200 rounded-lg w-1/3 mb-2"></div>
+                                        <div className="h-4 bg-gray-200 rounded-lg w-1/2"></div>
+                                    </div>
+                                </div>
+
+                                {/* What's Included Skeleton */}
+                                <div>
+                                    <div className="h-7 bg-gray-200 rounded-lg w-1/3 mb-4"></div>
+                                    <ul className="space-y-4">
+                                        {[...Array(4)].map((_, i) => (
+                                            <li key={i} className="flex items-start">
+                                                <div className="h-6 w-6 bg-gray-200 rounded-full mr-3"></div>
+                                                <div className="h-5 bg-gray-200 rounded-lg w-3/4"></div>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        );
+
+
+        </>
     }
 
     if (ServiceError) {
@@ -129,36 +190,7 @@ export default function ServiceDetails() {
                     </div>
                 </div>
 
-                {/* Additional Information Section
-                <div className="mt-12 bg-white rounded-2xl shadow-xl p-8">
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">What's Included</h2>
-                    <ul className="space-y-4">
-                        <li className="flex items-start">
-                            <svg className="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span className="text-gray-700">Initial consultation with our specialist</span>
-                        </li>
-                        <li className="flex items-start">
-                            <svg className="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span className="text-gray-700">Personalized treatment plan</span>
-                        </li>
-                        <li className="flex items-start">
-                            <svg className="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span className="text-gray-700">Regular progress tracking</span>
-                        </li>
-                        <li className="flex items-start">
-                            <svg className="h-6 w-6 text-green-500 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                            </svg>
-                            <span className="text-gray-700">24/7 customer support</span>
-                        </li>
-                    </ul>
-                </div> */}
+
             </div>
         </div>
     );

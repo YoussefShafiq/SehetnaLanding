@@ -6,6 +6,16 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        ultima: [
+          'UltimaPro',
+          'UltimaPro-Bold',
+          'UltimaPro-Italic',
+          'UltimaProBlack',
+          // Add other variants as needed
+          'sans-serif'
+        ],
+      },
       transformStyle: {
         'preserve-3d': 'preserve-3d',
       },

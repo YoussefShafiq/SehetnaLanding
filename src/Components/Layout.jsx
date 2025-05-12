@@ -11,14 +11,16 @@ export default function Layout({ children }) {
 
 
     return <>
-        <Navbar />
+        <div className="font-ultima">
+            <Navbar />
 
 
-        <div className="mt-16">
-            {children}
+            <div className="mt-16">
+                {children}
+            </div>
+            <Outlet></Outlet>
+
+            <Footer />
         </div>
-        <Outlet></Outlet>
-
-        <Footer />
     </>
 }

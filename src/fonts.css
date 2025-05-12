@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'UltimaPro';
+    src: url('./fonts/UltimaPro.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UltimaPro-Bold';
+    src: url('./fonts/UltimaPro-Bold_0.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'UltimaPro-Italic';
+    src: url('./fonts/UltimaPro-Italic.otf') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'UltimaProBlack';
+    src: url('./fonts/UltimaProBlack.otf') format('opentype');
+    font-weight: 900;
+    /* Black weight is typically 900 */
+    font-style: normal;
+}
+
+/* Add other variants as needed */

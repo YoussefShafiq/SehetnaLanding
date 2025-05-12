@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
+import './fonts.css';
 import 'animate.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './Components/Home';
