@@ -139,7 +139,7 @@ export default function FeedbacksSlider() {
     return (
         <div
             ref={sectionRef}
-            className={`py-12 px-4 bg-white h-fit transition-all duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'
+            className={`py-12 px-4 bg-white container h-fit transition-all duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'
                 }`}
         >
             <h2 className="text-4xl font-bold text-center mb-16 text-black"> {t('testimonials.title_w1')} <span className='text-primary'> {t('testimonials.title_w2')} </span></h2>

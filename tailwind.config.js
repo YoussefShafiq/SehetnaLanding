@@ -5,6 +5,16 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '1rem', // or your preferred padding
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+      },
+    },
     extend: {
       fontFamily: {
         ultima: [
@@ -23,12 +33,11 @@ export default {
         hidden: 'hidden',
       },
       colors: {
-        primary: "#3499c5",
-        primarydark: "#1a4a5e",
+        primary: "#015ccc",
+        primarydark: "#004499",
         secondary: "#009379",
       },
     },
   },
   plugins: [],
 }
-

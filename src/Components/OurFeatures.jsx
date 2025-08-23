@@ -9,25 +9,25 @@ export default function OurFeatures() {
     const features = [
         {
             title: t('ourFeatures.feature1.title'),
-            icon: <Zap color='#3499c5' />,
+            icon: <Zap color='#015ccc' />,
             animation: "animate__fadeInTopLeft",
             description: t('ourFeatures.feature1.description'),
         },
         {
             title: t('ourFeatures.feature2.title'),
-            icon: <Shield color='#3499c5' />,
+            icon: <Shield color='#015ccc' />,
             animation: "animate__fadeInTopRight",
             description: t('ourFeatures.feature2.description'),
         },
         {
             title: t('ourFeatures.feature3.title'),
-            icon: <Globe color='#3499c5' />,
+            icon: <Globe color='#015ccc' />,
             animation: "animate__fadeInBottomLeft",
             description: t('ourFeatures.feature3.description'),
         },
         {
             title: t('ourFeatures.feature4.title'),
-            icon: <Clock color='#3499c5' />,
+            icon: <Clock color='#015ccc' />,
             animation: "animate__fadeInBottomRight",
             description: t('ourFeatures.feature4.description'),
         }
@@ -35,7 +35,7 @@ export default function OurFeatures() {
 
 
     return (
-        <div className="flex flex-col lg:flex-row items-center py-10 lg:py-20 px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col lg:flex-row items-center py-10 lg:py-20 container lg:px-8">
             <div className="w-full lg:w-2/5 lg:flex justify-center items-center mb-10 lg:mb-0 hidden">
                 <img
                     src={img}

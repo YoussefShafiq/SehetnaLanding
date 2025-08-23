@@ -39,7 +39,7 @@ export default function CategoryServices() {
 
     if (categoryLoading) {
         return <>
-            <div className="min-h-screen px-4 sm:px-6 lg:px-8 py-8">
+            <div className="min-h-screen container py-8">
                 {/* Category Header Skeleton */}
                 <div className="mb-8 text-center">
                     <div className="h-10 bg-gray-200 rounded-lg w-1/5 mx-auto animate-pulse"></div>
@@ -88,7 +88,7 @@ export default function CategoryServices() {
 
     return (
         <div className="bg-gray-100">
-            <div className="min-h-screen px-4 sm:px-6 lg:px-8 py-8">
+            <div className="min-h-screen container py-8">
                 <div className="mb-8 text-center">
                     <h1 className="text-3xl font-bold text-gray-800">{categoryData?.data?.data?.name?.[currentLanguage]}</h1>
                     <p className="text-gray-600 mt-2">{categoryData?.data?.data?.description?.[currentLanguage]}</p>

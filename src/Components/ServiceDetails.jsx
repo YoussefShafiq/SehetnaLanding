@@ -32,7 +32,7 @@ export default function ServiceDetails() {
 
     if (ServiceLoading) {
         return <>
-            <div className="max-w-4xl mx-auto py-8 mb-5">
+            <div className="container py-8 mb-5">
                 {/* Service Header Skeleton */}
                 <div className="text-center mb-12">
                     <div className="inline-block mb-4">
@@ -111,8 +111,8 @@ export default function ServiceDetails() {
     }
 
     return (
-        <div className="min-h-screen bg-gray-50 p-5">
-            <div className="max-w-4xl mx-auto py-8 mb-5">
+        <div className="min-h-screen bg-gray-50 ">
+            <div className="container mx-auto py-8 mb-5">
                 {/* Service Header */}
                 <div className="text-center mb-12">
                     <span className="inline-block text-6xl mb-4"><img src={'https://api.sehtnaa.com/storage/' + ServiceData?.data?.data?.category?.icon} className=" h-16" alt="" /></span>

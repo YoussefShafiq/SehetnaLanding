@@ -19,39 +19,41 @@ export default function Stats() {
         {
             title: t("metrics.users"),
             value: (landingData?.data?.data?.customers?.count < 275 ? 275 : landingData?.data?.data?.customers?.count) || 0,
-            icon: <User2 size={40} color='#3499c5' strokeWidth={2} />
+            icon: <User2 size={40} color='#015ccc' strokeWidth={2} />
         },
         {
             title: t("metrics.providers"),
             value: landingData?.data?.data?.providers?.count || 0,
-            icon: <UsersRound size={40} color='#3499c5' strokeWidth={2} />
+            icon: <UsersRound size={40} color='#015ccc' strokeWidth={2} />
         },
         {
             title: t("metrics.services"),
             value: landingData?.data?.data?.services?.count || 0,
-            icon: <HandHeart size={40} color='#3499c5' strokeWidth={2} />
+            icon: <HandHeart size={40} color='#015ccc' strokeWidth={2} />
         },
         {
             title: t("metrics.totalUsers"),
             value: (landingData?.data?.data?.users?.count < 412 ? 412 : landingData?.data?.data?.users?.count) || 0,
-            icon: <UsersRound size={40} color='#3499c5' strokeWidth={2} />
+            icon: <UsersRound size={40} color='#015ccc' strokeWidth={2} />
         }
     ];
 
     return (
-        <div className="flex flex-col gap-8 py-20  px-4 bg-primary bg-opacity-15 text-center">
-            <h1 className='text-4xl font-bold text-black'> {t("metrics.title_w1")} <span className='text-primary'>{t("metrics.title_w2")}</span> {t("metrics.title_w3")}</h1>
-            <div className="flex justify-center gap-8 flex-wrap">
-                {landingData?.data?.data && <>
-                    {stats.map((stat, index) => (
-                        <StatItem
-                            key={stat.value + index}
-                            title={stat.title}
-                            value={stat.value}
-                            icon={stat.icon}
-                        />
-                    ))}
-                </>}
+        <div className="bg-primary bg-opacity-15 ">
+            <div className="flex flex-col gap-8 py-20 container text-center">
+                <h1 className='text-4xl font-bold text-black'> {t("metrics.title_w1")} <span className='text-primary'>{t("metrics.title_w2")}</span> {t("metrics.title_w3")}</h1>
+                <div className="flex justify-center gap-8 flex-wrap">
+                    {landingData?.data?.data && <>
+                        {stats.map((stat, index) => (
+                            <StatItem
+                                key={stat.value + index}
+                                title={stat.title}
+                                value={stat.value}
+                                icon={stat.icon}
+                            />
+                        ))}
+                    </>}
+                </div>
             </div>
         </div>
     );
@@ -113,7 +115,7 @@ function StatItem({ title, value, icon }) {
             className="flex flex-col items-center justify-center w-40 h-40 sm:w-48 sm:h-48 bg-white shadow-xl shadow-[#569bb94d] rounded-xl p-5 transition-all hover:scale-105"
         >
             {icon}
-            <h2 className="text-lg sm:text-xl font-medium text-[#2a7b9e]">{title}</h2>
+            <h2 className="text-lg sm:text-xl font-medium text-primary">{title}</h2>
             <p className="text-3xl sm:text-4xl font-bold text-primary mt-2">
                 {count.toLocaleString()}
             </p>
