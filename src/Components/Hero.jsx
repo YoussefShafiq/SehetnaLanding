@@ -56,7 +56,7 @@ export default function Hero() {
                         {t('hero.description')}
                     </p>
                     <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-5 font-semibold mt-3">
-                        <a href="#download" className={`flex items-center gap-2 bg-secondary text-white px-4 sm:px-5 py-2 sm:py-3 rounded-xl hover:bg-secondary/90 transition-all ${animated ? 'animate__animated animate__bounceIn' : 'opacity-0'
+                        <a href="#download" className={`flex items-center gap-2 bg-[#fff] text-primary px-4 sm:px-5 py-2 sm:py-3 rounded-xl hover:bg-[#009379] hover:text-white transition-all ${animated ? 'animate__animated animate__bounceIn' : 'opacity-0'
                             }`}>
                             <Rocket size={18} /> {t('hero.button')}
                         </a>
