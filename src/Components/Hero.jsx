@@ -37,10 +37,10 @@ export default function Hero() {
     return (
         <div
             ref={sectionRef}
-            className="flex flex-col p-5 pb-0 bg-primary text-white mt-16"
+            className="flex flex-col p-5 pb-0 bg-primary text-white "
         >
             {/* Navbar */}
-            <Navbar />
+            {/* <Navbar /> */}
 
             {/* Hero Content */}
             <div className="flex flex-col container lg:flex-row justify-between items-center mt-10 sm:mt-5 lg:mt-0 flex-grow">

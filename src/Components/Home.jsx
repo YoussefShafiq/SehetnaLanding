@@ -18,7 +18,6 @@ export default function Home() {
             <FeedbacksSlider />
             <ContactUs />
             <AppLinks />
-            <Footer />
         </div>
     </>
 }

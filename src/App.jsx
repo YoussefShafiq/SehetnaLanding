@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import './App.css';
 import './fonts.css';
 import 'animate.css';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, Link, RouterProvider } from 'react-router-dom';
 import Home from './Components/Home';
 import Notfound from './Components/Notfound';
 import { Helmet } from 'react-helmet';
@@ -10,6 +10,8 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import CategoryServices from './Components/CategoryServices';
 import ServiceDetails from './Components/ServiceDetails';
 import Layout from './Components/Layout';
+import { InfoIcon } from 'lucide-react';
+import Info from './Components/Info';
 
 <Helmet>
   <title>Sehtnaa | Home Medical Services at Your Doorstep</title>
@@ -34,20 +36,21 @@ function App() {
 
   const routers = createBrowserRouter([
     // { path: "/", errorElement: <Notfound />, element: <Home /> },
-    { path: "/", element: <Home /> },
-    { path: "/home", element: <Home /> },
+    { path: "/", element: <Layout><Home /></Layout> },
+    { path: "/home", element: <Layout><Home /></Layout> },
     { path: "/category/:categoryId", element: <Layout><CategoryServices /></Layout> },
     { path: "/service/:serviceId", element: <Layout><ServiceDetails /></Layout> },
+    { path: "/info", element: <Layout><Info /></Layout> },
     { path: "*", element: <Notfound /> },
   ]);
 
   let query = new QueryClient()
 
-  return (
+  return <>
     <QueryClientProvider client={query}>
       <RouterProvider router={routers} />
     </QueryClientProvider>
-  );
+  </>;
 }
 
 export default App;
